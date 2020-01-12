@@ -1,0 +1,26 @@
+.u-container {
+
+
+    &__primary {
+        max-width: 185rem;
+        margin: 0 auto;
+    }
+
+    &__secondary {
+        max-width: 122.6rem;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+}
+
+
+.u-border {
+    align-self: stretch;
+    width: 1px;
+    background-color: rgba(grey, .5);
+    z-index: 9999;
+}
