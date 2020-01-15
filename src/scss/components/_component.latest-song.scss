@@ -9,61 +9,124 @@
 
         margin-bottom: 1.1rem;
         padding: 1rem 1.5rem;
-
+        position: relative;
+        z-index: 1;
 
         &--1 {
             background-image: url(../img/latest-song/latest-song-1-bg.png);
+            background-repeat: no-repeat;
+            background-position: -5rem -6.5rem;
 
         }
 
         &--2 {
             background-image: url(../img/latest-song/latest-song-2-bg.png);
+            background-repeat: no-repeat;
+            background-position: -12rem -.5rem;
         }
 
         &--3 {
             background-image: url(../img/latest-song/latest-song-3-bg.png);
+            background-repeat: no-repeat;
+            background-size: 170%;
+            background-position: -5rem -2rem;
         }
 
         &--4 {
             background-image: url(../img/latest-song/latest-song-4-bg.png);
+            background-repeat: no-repeat;
+            background-position: -4.2rem -1rem;
         }
 
         &--5 {
             background-image: url(../img/latest-song/latest-song-5-bg.png);
+            background-repeat: no-repeat;
+            background-position: -9rem -1.5rem;
         }
 
         &--6 {
             background-image: url(../img/latest-song/latest-song-6-bg.png);
+            background-repeat: no-repeat;
+            background-position: -8rem -2rem;
         }
 
         &--7 {
             background-image: url(../img/latest-song/latest-song-7-bg.png);
+            background-repeat: no-repeat;
+            background-position: -1rem -1rem;
         }
 
         &--8 {
             background-image: url(../img/latest-song/latest-song-8-bg.png);
+            background-repeat: no-repeat;
+            background-position: -6rem -4rem;
         }
 
         &--9 {
             background-image: url(../img/latest-song/latest-song-9-bg.png);
+            background-repeat: no-repeat;
+            background-size: 135%;
+            background-position: -1rem -2.5rem;
         }
 
         &--10 {
             background-image: url(../img/latest-song/latest-song-10-bg.png);
+            background-repeat: no-repeat;
+            background-position: -1rem -5rem;
         }
 
         &--11 {
             background-image: url(../img/latest-song/latest-song-11-bg.png);
+            background-repeat: no-repeat;
+            background-position: -6rem -2rem;
         }
 
         &--12 {
             background-image: url(../img/latest-song/latest-song-12-bg.png);
+            background-repeat: no-repeat;
+            background-position: -34rem -16.5rem;
         }
+    }
+
+    &__image-shadow {
+        position: absolute;
+        height: 60%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to top, rgba($color-black, .9), transparent);
+        z-index: -1;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color-secondary, .8);
+        opacity: 0;
+        transition: all .3s;
+    }
+
+    &:hover &__link {
+        opacity: 1;
+    }
+
+    &:hover &__icons {
+        display: none;
+    }
+
+    &__hover-icon {
+        font-size: 6rem;
+        color: $color-white;
     }
 
     &__icons {
         font-size: 1.5rem;
-
         display: flex;
         justify-content: space-between;
         align-items: flex-end;

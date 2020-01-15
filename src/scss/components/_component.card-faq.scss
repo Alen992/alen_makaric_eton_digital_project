@@ -8,19 +8,48 @@
 
         &--1 {
             background-image: url(../img/how-to/how-to-1-bg.png);
+            background-size: 131%;
+            background-position: -5.5rem -1.5rem;
         }
 
         &--2 {
             background-image: url(../img/how-to/how-to-2-bg.png);
+            background-position: -8rem -13rem;
         }
 
         &--3 {
             background-image: url(../img/how-to/how-to-3-bg.png);
+            background-position: -2rem -.5rem;
         }
 
         &--4 {
             background-image: url(../img/how-to/how-to-4-bg.png);
+            background-position: 0 -5rem;
         }
+
+
+    }
+
+    &:hover &__link {
+        opacity: 1;
+    }
+
+    &__link {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($color-black, .7);
+        opacity: 0;
+        transition: all .3s;
+
+    }
+
+    &__hover-icon {
+        width: 7rem;
+        height: 7rem;
+        fill: $color-secondary;
     }
 
     &__details {

@@ -20,7 +20,7 @@
 
 
 .create-your-own {
-    height: 53.2rem;
+
     background-color: $color-grey-light-secondary;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@
     background-image: url(../img/section-most-popular-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0 -380px;
+    background-position: 0 -38rem;
 
 
     &__lists {
@@ -61,7 +61,7 @@
 .how-to {
     min-height: 53rem;
     background-color: $color-grey-light-tertiary;
-    padding: 1.8rem 0;
+    padding: 1.8rem 0 .5rem;
 
     &__cards {
         display: flex;

@@ -87,6 +87,7 @@
         display: flex;
         align-items: center;
         margin-bottom: -.3rem;
+        fill: $color-white;
 
     }
 
@@ -94,10 +95,30 @@
         display: flex;
         align-items: center;
         position: relative;
-        font-size: 2.6rem;
         padding: 0 .5rem;
-        margin: 0 1.2rem;
+        margin: 0 1.1rem;
         z-index: 1;
+
+        &:last-child {
+            margin-right: 1.8rem;
+        }
+
+        &--envelope {
+            width: 25px;
+            height: 21px;
+        }
+
+        &--alarm {
+            width: 22px;
+            height: 26px;
+        }
+
+        &--users {
+            width: 27px;
+            height: 25px;
+        }
+
+
     }
 
     &__envelope {
