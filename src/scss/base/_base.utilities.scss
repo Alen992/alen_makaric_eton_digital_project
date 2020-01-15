@@ -1,26 +1,38 @@
-.u-container {
-
-
-    &__primary {
-        max-width: 185rem;
-        margin: 0 auto;
-    }
-
-    &__secondary {
-        max-width: 122.6rem;
-        margin: 0 auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-    }
+.u-container__primary {
+    max-width: 185rem;
+    margin: 0 auto;
 }
 
+.u-container__secondary {
+    max-width: 136.6rem;
+    margin: 0 auto;
+    padding: 6rem 0 7rem 0;
+    position: relative;
+}
+
+.u-container__tertiary {
+    max-width: 136.6rem;
+    margin: 0 auto;
+    padding: 6rem 0 5.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.u-container__quaternary {
+    max-width: 136.6rem;
+    margin: 0 auto;
+}
 
 .u-border {
     align-self: stretch;
     width: 1px;
     background-color: rgba(grey, .5);
     z-index: 9999;
+}
+
+.u-ball {
+    height: .4rem;
+    width: .4rem;
+    background-color: $color-white;
+    border-radius: 50%;
 }

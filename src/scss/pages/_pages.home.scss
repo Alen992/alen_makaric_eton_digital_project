@@ -5,4 +5,66 @@
     background-position: top;
     height: 76.8rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+}
+
+
+.create-your-own {
+    height: 53.2rem;
+    background-color: $color-grey-light-secondary;
+    display: flex;
+    align-items: center;
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.most-popular {
+
+    background-image: url(../img/section-most-popular-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -380px;
+
+
+    &__lists {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.latest-songs {
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: .7rem;
+
+    }
+}
+
+.how-to {
+    min-height: 53rem;
+    background-color: $color-grey-light-tertiary;
+    padding: 1.8rem 0;
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
 }

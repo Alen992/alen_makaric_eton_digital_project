@@ -1,0 +1,82 @@
+.card-faq {
+    height: 31.8rem;
+    width: 31.2rem;
+
+    &__image {
+        height: 20rem;
+        border-bottom: 1rem solid $color-secondary;
+
+        &--1 {
+            background-image: url(../img/how-to/how-to-1-bg.png);
+        }
+
+        &--2 {
+            background-image: url(../img/how-to/how-to-2-bg.png);
+        }
+
+        &--3 {
+            background-image: url(../img/how-to/how-to-3-bg.png);
+        }
+
+        &--4 {
+            background-image: url(../img/how-to/how-to-4-bg.png);
+        }
+    }
+
+    &__details {
+        padding: 2.5rem 2.5rem 3rem;
+        background-color: $color-white;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.3rem;
+    }
+
+    &__category {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__category-name {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        border-bottom: .1rem solid $color-grey-light-quaternary;
+        border-top: .1rem solid $color-grey-light-quaternary;
+        border-right: .1rem solid $color-grey-light-quaternary;
+        padding: .2rem 1.8rem;
+        position: relative;
+        z-index: 1;
+
+        // border made on the left side
+        &::before {
+            content: '';
+            width: 10%;
+            height: calc(100% +.2rem);
+            background-color: $color-secondary;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+
+    &__date {
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__icon {
+        fill: grey;
+        height: 1.4rem;
+        margin-right: .7rem;
+    }
+
+
+}

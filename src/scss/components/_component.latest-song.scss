@@ -1,0 +1,109 @@
+.latest-song {
+    width: 19.7rem;
+    height: 28.4rem;
+
+
+    &__image {
+        height: 19.5rem;
+        width: 100%;
+
+        margin-bottom: 1.1rem;
+        padding: 1rem 1.5rem;
+
+
+        &--1 {
+            background-image: url(../img/latest-song/latest-song-1-bg.png);
+
+        }
+
+        &--2 {
+            background-image: url(../img/latest-song/latest-song-2-bg.png);
+        }
+
+        &--3 {
+            background-image: url(../img/latest-song/latest-song-3-bg.png);
+        }
+
+        &--4 {
+            background-image: url(../img/latest-song/latest-song-4-bg.png);
+        }
+
+        &--5 {
+            background-image: url(../img/latest-song/latest-song-5-bg.png);
+        }
+
+        &--6 {
+            background-image: url(../img/latest-song/latest-song-6-bg.png);
+        }
+
+        &--7 {
+            background-image: url(../img/latest-song/latest-song-7-bg.png);
+        }
+
+        &--8 {
+            background-image: url(../img/latest-song/latest-song-8-bg.png);
+        }
+
+        &--9 {
+            background-image: url(../img/latest-song/latest-song-9-bg.png);
+        }
+
+        &--10 {
+            background-image: url(../img/latest-song/latest-song-10-bg.png);
+        }
+
+        &--11 {
+            background-image: url(../img/latest-song/latest-song-11-bg.png);
+        }
+
+        &--12 {
+            background-image: url(../img/latest-song/latest-song-12-bg.png);
+        }
+    }
+
+    &__icons {
+        font-size: 1.5rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 100%;
+        color: $color-white;
+    }
+
+    &__left-icons {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__group {
+        margin-top: .8rem;
+        display: flex;
+    }
+
+
+
+    &__icon {
+        height: 2rem;
+        fill: rgba($color-white, .8);
+        margin-right: .4rem;
+        font-size: 1.7rem;
+        color: rgba($color-white, .8);
+    }
+
+    &__number {}
+
+    &__details {
+        margin-left: -.1rem;
+        color: $color-primary;
+    }
+
+    &__artist {
+        margin-bottom: .4rem;
+    }
+
+    &__song-title {
+        font-weight: bold;
+    }
+}

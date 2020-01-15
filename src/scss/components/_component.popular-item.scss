@@ -1,0 +1,155 @@
+.popular-item {
+    height: 6rem;
+
+    position: relative;
+    width: 100%;
+    display: flex;
+
+
+    &:hover &__play {
+        opacity: 1;
+    }
+
+
+    &__image {
+        height: 100%;
+        width: 6rem;
+        margin-right: 1.4rem;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        &--1 {
+            background-image: url(../img/popular-item/popular-item-1-bg.png);
+            background-size: 150%;
+        }
+
+        &--2 {
+            background-image: url(../img/popular-item/popular-item-2-bg.png);
+        }
+
+        &--3 {
+            background-image: url(../img/popular-item/popular-item-3-bg.png);
+        }
+
+        &--4 {
+            background-image: url(../img/popular-item/popular-item-1-bg.png);
+        }
+
+        &--5 {
+            background-image: url(../img/popular-item/popular-item-4-bg.png);
+        }
+
+        &--6 {
+            background-image: url(../img/popular-item/popular-item-5-bg.png);
+        }
+
+        &--7 {
+            background-image: url(../img/popular-item/popular-item-6-bg.png);
+        }
+
+        &--8 {
+            background-image: url(../img/popular-item/popular-item-7-bg.png);
+        }
+
+        &--9 {
+            background-image: url(../img/popular-item/popular-item-8-bg.png);
+        }
+
+        &--10 {
+            background-image: url(../img/popular-item/popular-item-9-bg.png);
+        }
+
+        &--11 {
+            background-image: url(../img/popular-item/popular-item-10-bg.png);
+        }
+
+        &--12 {
+            background-image: url(../img/popular-item/popular-item-11-bg.png);
+        }
+
+        &--13 {
+            background-image: url(../img/popular-item/popular-item-12-bg.png);
+        }
+
+        &--14 {
+            background-image: url(../img/popular-item/popular-item-13-bg.png);
+        }
+
+        &--15 {
+            background-image: url(../img/popular-item/popular-item-14-bg.png);
+        }
+
+
+
+
+    }
+
+    &__play {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($color-secondary, .8);
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all .2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__play-icon {
+        font-size: 3.6rem;
+        color: $color-white;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__artist {
+        margin-top: -.4rem;
+        margin-bottom: .2rem;
+    }
+
+    &__song {
+        font-weight: bold;
+
+    }
+
+    &__icons {
+
+        display: flex;
+        color: $color-grey-light-primary;
+        margin-top: .4rem;
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        margin-right: .8rem;
+
+        &:nth-child(2) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__icon {
+        height: 1.8rem;
+        fill: $color-grey-light-primary;
+
+        &--icon-heart {
+            margin-right: .5rem;
+        }
+
+    }
+
+    &__number {
+        font-size: 1.5rem;
+    }
+
+
+}
