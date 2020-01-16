@@ -97,4 +97,4 @@ function watchTask() {
 // then runs watch task
 exports.default = series(parallel(htmlTask, scssTask, jsTask), watchTask);
 
-// npm install --save-dev gulp gulp-sourcemaps gulp-sass gulp-postcss autoprefixer cssnano gulp-replace browser-sync gulp-htmlmin
+// npm install --save-dev gulp gulp-sourcemaps gulp-sass gulp-postcss autoprefixer cssnano gulp-replace browser-sync gulp-htmlmin gulp-concat gulp-uglify gulp-babel gulp-plumber @babel/preset-env @babel/core
