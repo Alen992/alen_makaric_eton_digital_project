@@ -1,12 +1,12 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "description": "",
+  "description": "Responsive website - test",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Alen Makarić",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.7",
