@@ -7,7 +7,7 @@
 
     @media only screen and (max-width: 900px) {
         padding: 0;
-        height: 8vh;
+        height: 10vh;
         @include alignCenterFlex;
         border-bottom: 1px solid $color-secondary;
     }
@@ -30,10 +30,10 @@
 
         @media only screen and (max-width: 900px) {
             position: absolute;
-            top: 8vh;
+            top: 10vh;
             left: 0;
             flex-direction: column;
-            height: 92vh;
+            height: 90vh;
             background-color: $color-primary;
             width: 40rem;
             transform: translateX(-100%);
@@ -65,8 +65,9 @@
     &__burger-line {
         height: .4rem;
         width: 4rem;
-        background-color: $color-white;
+        background-color: $color-secondary;
         margin: .7rem;
+
 
         &--1 {
             transition: all .3s;
