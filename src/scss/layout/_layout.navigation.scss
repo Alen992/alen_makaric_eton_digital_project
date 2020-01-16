@@ -1,34 +1,128 @@
 .nav {
     background-color: $color-primary;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 99;
+    padding-top: .5rem;
+
+    @media only screen and (max-width: 900px) {
+        padding: 0;
+        height: 8vh;
+        @include alignCenterFlex;
+        border-bottom: 1px solid $color-secondary;
+    }
 
     &__container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include alignCenterFlex;
+        width: 100%;
+
+        @media only screen and (max-width: 900px) {
+            justify-content: space-between;
+            padding: 0 .5rem;
+        }
+
     }
 
     &__navigation {
-        display: flex;
+        @include abCenterFlex;
+        width: 100%;
+        transition: all .3s;
 
+        @media only screen and (max-width: 900px) {
+            position: absolute;
+            top: 8vh;
+            left: 0;
+            flex-direction: column;
+            height: 92vh;
+            background-color: $color-primary;
+            width: 40rem;
+            transform: translateX(-100%);
+            justify-content: space-evenly;
+
+        }
+
+        @media only screen and (max-width: 700px) {
+            width: 100%;
+        }
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        @media only screen and (max-width: 900px) {
+            display: block;
+        }
+
+
+
+
+    }
+
+    &__burger-line {
+        height: .4rem;
+        width: 4rem;
+        background-color: $color-white;
+        margin: .7rem;
+
+        &--1 {
+            transition: all .3s;
+
+        }
+
+        &--2 {}
+
+        &--3 {}
     }
 
     &__logo {
         margin-left: 2.2rem;
         margin-right: 5.4rem;
         padding: .7rem 0;
+
+        @media only screen and (max-width: 1570px) {
+            margin-right: 0;
+            margin-left: .5rem;
+            padding-right: 0;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            margin-left: .2rem;
+        }
+
+        @media only screen and (max-width: 900px) {
+            padding: .1rem;
+
+        }
+
+    }
+
+    &__logo-image {
+        @media only screen and (max-width: 900px) {
+            width: .2rem;
+        }
     }
 
     &__list {
-        display: flex;
-        align-items: center;
+        @include alignCenterFlex;
         margin-top: -.3rem;
+
+        @media only screen and (max-width: 900px) {
+            order: 3;
+            flex-direction: column;
+        }
     }
 
     &__item {
         display: inline-block;
+
+        @media only screen and (max-width: 900px) {
+            padding: .7rem
+        }
+
     }
 
     &__link {
@@ -36,19 +130,47 @@
         padding: 1rem 1.5rem;
         margin-right: 1.3rem;
 
+        &--dropdown {
+            position: relative;
+
+            &:hover .nav__dropdown {
+                transform: rotate(-180deg);
+            }
+        }
+
+        @media only screen and (max-width: 1380px) {
+            padding: .5rem .75rem;
+            margin-right: .5rem;
+        }
+
+        @media only screen and (max-width: 1380px) {
+            padding: .3rem;
+            margin-right: .5rem;
+            margin-left: 1rem;
+        }
+
+        @media only screen and (max-width: 950px) {
+            padding: .2;
+            margin-right: 0rem;
+        }
+
+        @media only screen and (max-width: 900px) {
+            font-size: 2rem;
+        }
+
         &:hover {
             color: $color-secondary;
         }
 
         &:last-child {
-            display: flex;
-            align-items: center;
+            @include alignCenterFlex;
         }
 
     }
 
     &__dropdown {
         margin-left: .3rem;
+        transition: all .2s;
     }
 
     &__search {
@@ -57,7 +179,23 @@
         height: 4rem;
         border-bottom: 1px solid $color-secondary;
         margin-left: 1.1rem;
-        min-width: 30rem;
+
+        @media only screen and (max-width: 1500px) {
+            width: 40rem;
+        }
+
+        @media only screen and (max-width: 1380px) {
+            width: 30rem;
+        }
+
+        @media only screen and (max-width: 1110px) {
+            width: 23rem;
+            margin-left: .5rem;
+        }
+
+        @media only screen and (max-width: 900px) {
+            order: 2;
+        }
     }
 
     &__input {
@@ -69,38 +207,72 @@
         background-color: transparent;
         border: none;
         color: $color-secondary;
-
-
+        transition: all .2s;
+        border-radius: .4rem;
 
         &::placeholder {
             color: $color-secondary;
         }
+
+        &:focus {
+            background-color: darken($color-primary, 15%);
+        }
+
+
     }
 
     &__user {
-        display: flex;
-        align-items: center;
+        @include alignCenterFlex;
         color: $color-white;
+
+        @media only screen and (max-width: 900px) {
+            order: 1;
+            flex-direction: row-reverse;
+        }
     }
 
     &__icons {
-        display: flex;
-        align-items: center;
+        @include alignCenterFlex;
         margin-bottom: -.3rem;
         fill: $color-white;
+
+        @media only screen and (max-width: 900px) {
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
+            margin-bottom: 0;
+            order: 1;
+        }
 
     }
 
     &__icon {
-        display: flex;
-        align-items: center;
+        @include alignCenterFlex;
         position: relative;
         padding: 0 .5rem;
         margin: 0 1.1rem;
         z-index: 1;
+        cursor: pointer;
+
+        &:hover>* {
+            fill: $color-secondary;
+        }
+
+        @media only screen and (max-width: 1040px) {
+            margin: 0 .5rem;
+        }
 
         &:last-child {
             margin-right: 1.8rem;
+
+            @media only screen and (max-width: 1040px) {
+                margin-right: .5rem;
+            }
+
+            @media only screen and (max-width: 900px) {
+                margin-right: 0;
+            }
+
         }
 
         &--envelope {
@@ -171,8 +343,26 @@
         margin-right: 3rem;
         background-image: url(../img/user-picture.png);
         background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         position: relative;
         margin-left: 1.5rem;
+
+        @media only screen and (max-width: 1100px) {
+            margin: 0 1rem;
+        }
+
+        @media only screen and (max-width: 900px) {
+            margin-right: 1.5rem;
+            order: 1;
+            height: 15rem;
+            width: 15rem;
+
+        }
+
+        @media only screen and (max-width: 350px) {
+            margin-left: 3rem;
+        }
 
     }
 
@@ -181,33 +371,39 @@
         flex-direction: column;
         line-height: 1.4rem;
         margin-left: 3rem;
-        margin-right: 2rem;
+        margin-right: 4rem;
+        width: 2.8rem;
 
+        @media only screen and (max-width: 1100px) {
+            margin: 0 1rem;
+        }
 
+        @media only screen and (max-width: 900px) {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+
+        }
     }
 
-    &__flag {}
+    &__flag {
+        margin-bottom: 0rem;
+    }
 
     &__language {
-        display: flex;
-        align-items: center;
-        margin-right: 2.1rem;
-
-        &--text {
-            text-transform: uppercase;
-            font-size: 1.25rem;
-        }
-
-        &--dropdown {
-            margin-left: .4rem;
-            margin-bottom: -.2rem;
-            width: 0;
-            height: 0;
-            border-left: .4rem solid transparent;
-            border-right: .4rem solid transparent;
-            border-top: .4rem solid $color-white;
-
-        }
+        text-transform: uppercase;
+        background-color: $color-primary;
+        color: $color-white;
+        border: none;
+        font-size: 1.1rem;
+        width: 3.8rem;
+        margin-left: -.4rem;
+        outline: none;
     }
 
+    &__language-text {
+        background-color: $color-secondary;
+        color: $color-primary;
+
+    }
 }

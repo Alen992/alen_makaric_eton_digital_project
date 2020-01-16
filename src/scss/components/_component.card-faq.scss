@@ -2,29 +2,73 @@
     height: 31.8rem;
     width: 31.2rem;
 
+    @media only screen and (max-width: 1300px) {
+        width: 23%;
+    }
+
+    @media only screen and (max-width: 900px) {
+        width: 31.2rem;
+        margin-bottom: 2rem;
+    }
+
+    @media only screen and (max-width: 700px) {
+        width: 48%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 80%;
+        height: 42.8rem;
+    }
+
+
     &__image {
         height: 20rem;
         border-bottom: 1rem solid $color-secondary;
+        background-repeat: no-repeat;
+
+        @media only screen and (max-width: 600px) {
+            background-size: cover;
+            height: 30rem;
+        }
 
         &--1 {
             background-image: url(../img/how-to/how-to-1-bg.png);
             background-size: 131%;
             background-position: -5.5rem -1.5rem;
+
+            @media only screen and (max-width: 1260px) {
+                background-size: 200%;
+
+            }
+
         }
 
         &--2 {
             background-image: url(../img/how-to/how-to-2-bg.png);
             background-position: -8rem -13rem;
+
+            @media only screen and (max-width: 600px) {
+                background-size: 150%;
+            }
         }
 
         &--3 {
             background-image: url(../img/how-to/how-to-3-bg.png);
             background-position: -2rem -.5rem;
+
+            @media only screen and (max-width: 600px) {
+                background-size: 150%;
+
+            }
         }
 
         &--4 {
             background-image: url(../img/how-to/how-to-4-bg.png);
             background-position: 0 -5rem;
+
+            @media only screen and (max-width: 600px) {
+                background-size: 150%;
+            }
         }
 
 
@@ -37,9 +81,7 @@
     &__link {
         height: 100%;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include abCenterFlex;
         background-color: rgba($color-black, .7);
         opacity: 0;
         transition: all .3s;
@@ -55,6 +97,22 @@
     &__details {
         padding: 2.5rem 2.5rem 3rem;
         background-color: $color-white;
+
+        @media only screen and (max-width: 1100px) {
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        @media only screen and (max-width: 1020px) {
+            padding: 2rem .5rem 3rem;
+        }
+
+        @media only screen and (max-width: 900px) {
+            padding: 2rem 2rem 3rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            padding: 2.5rem 2.5rem 3rem;
+        }
     }
 
     &__title {
@@ -64,9 +122,9 @@
     }
 
     &__category {
-        display: flex;
+        @include alignCenterFlex;
         justify-content: space-between;
-        align-items: center;
+
 
     }
 
@@ -96,15 +154,17 @@
 
     &__date {
         font-size: 1.4rem;
-        display: flex;
-        align-items: center;
-
+        @include alignCenterFlex;
     }
 
     &__icon {
         fill: grey;
         height: 1.4rem;
         margin-right: .7rem;
+
+        @media only screen and (max-width: 950px) {
+            margin-right: .3rem;
+        }
     }
 
 

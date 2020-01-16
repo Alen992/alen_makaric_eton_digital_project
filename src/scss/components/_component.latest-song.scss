@@ -2,6 +2,14 @@
     width: 19.7rem;
     height: 28.4rem;
 
+    @media only screen and (max-width: 1210px) {
+        width: 24%;
+    }
+
+    @media only screen and (max-width: 800px) {
+        width: 45%;
+    }
+
 
     &__image {
         height: 19.5rem;
@@ -12,10 +20,27 @@
         position: relative;
         z-index: 1;
 
+        @media only screen and (max-width: 1210px) {
+            background-size: 150%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            background-size: 200%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            background-size: cover;
+            background-position: 0 0;
+        }
+
         &--1 {
             background-image: url(../img/latest-song/latest-song-1-bg.png);
             background-repeat: no-repeat;
             background-position: -5rem -6.5rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
 
         }
 
@@ -23,6 +48,10 @@
             background-image: url(../img/latest-song/latest-song-2-bg.png);
             background-repeat: no-repeat;
             background-position: -12rem -.5rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--3 {
@@ -30,36 +59,60 @@
             background-repeat: no-repeat;
             background-size: 170%;
             background-position: -5rem -2rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--4 {
             background-image: url(../img/latest-song/latest-song-4-bg.png);
             background-repeat: no-repeat;
             background-position: -4.2rem -1rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--5 {
             background-image: url(../img/latest-song/latest-song-5-bg.png);
             background-repeat: no-repeat;
             background-position: -9rem -1.5rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--6 {
             background-image: url(../img/latest-song/latest-song-6-bg.png);
             background-repeat: no-repeat;
             background-position: -8rem -2rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--7 {
             background-image: url(../img/latest-song/latest-song-7-bg.png);
             background-repeat: no-repeat;
             background-position: -1rem -1rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--8 {
             background-image: url(../img/latest-song/latest-song-8-bg.png);
             background-repeat: no-repeat;
             background-position: -6rem -4rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--9 {
@@ -67,24 +120,41 @@
             background-repeat: no-repeat;
             background-size: 135%;
             background-position: -1rem -2.5rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--10 {
             background-image: url(../img/latest-song/latest-song-10-bg.png);
             background-repeat: no-repeat;
             background-position: -1rem -5rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--11 {
             background-image: url(../img/latest-song/latest-song-11-bg.png);
             background-repeat: no-repeat;
             background-position: -6rem -2rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
         }
 
         &--12 {
             background-image: url(../img/latest-song/latest-song-12-bg.png);
             background-repeat: no-repeat;
             background-position: -34rem -16.5rem;
+
+            @media only screen and (max-width: 1210px) {
+                background-position: 0rem 0rem;
+            }
+
         }
     }
 
@@ -104,9 +174,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include abCenterFlex;
         background-color: rgba($color-secondary, .8);
         opacity: 0;
         transition: all .3s;

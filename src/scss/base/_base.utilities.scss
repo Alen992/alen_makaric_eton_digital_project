@@ -6,21 +6,39 @@
 .u-container__secondary {
     max-width: 136.6rem;
     margin: 0 auto;
-    padding: 7rem 0 7rem 0;
+    padding: 7rem 0;
     position: relative;
+
+    @media only screen and (max-width:900px) {
+        padding: 3rem 0;
+    }
 }
 
 .u-container__tertiary {
     max-width: 136.6rem;
     margin: 0 auto;
-    padding: 6rem 0 6.8rem 0;
+    padding: 6rem 0 6.8rem;
     display: flex;
     flex-direction: column;
+
+
+
+    @media only screen and (max-width:1100px) {
+        padding: 3rem 1rem;
+    }
+
+    @media only screen and (max-width: 950px) {
+        padding: 3rem 0;
+    }
 }
 
 .u-container__quaternary {
     max-width: 136.6rem;
     margin: 0 auto;
+
+    @media only screen and (max-width: 445px) {
+        margin: 0;
+    }
 }
 
 .u-border {
@@ -28,11 +46,34 @@
     width: 1px;
     background-color: rgba(grey, .5);
     z-index: 9999;
+
+
+    @media only screen and (max-width: 900px) {
+        align-self: center;
+        height: 3.3rem;
+    }
+
+    @media only screen and (max-width: 770px) {
+        display: none;
+    }
+
+    &--primary {
+
+        @media only screen and (max-width: 900px) {
+            display: none;
+        }
+    }
 }
+
+
 
 .u-ball {
     height: .4rem;
     width: .4rem;
     background-color: $color-white;
     border-radius: 50%;
+
+    @media only screen and (max-width: 770px) {
+        display: none;
+    }
 }

@@ -11,31 +11,58 @@
         border: none;
         outline: none;
         transition: transform .1s ease;
-        color: $color-secondary;
+        fill: $color-secondary;
 
         &:active {
             transform: translateY(.1rem);
         }
+
+
+        @media only screen and (max-width: 900px) {
+            width: 7%;
+        }
+
+
     }
 }
 
 
 
 .btn__create {
-    background-color: $color-secondary;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0 .3rem 0 darken($color-secondary, 10%);
-    font-family: 'Open Sans', sans-serif;
-    padding: 1.3rem 0;
-    width: 16rem;
-    color: $color-green-dark;
-    transition: all .2s ease;
-    text-align: center;
+
+    &:link,
+    &:visited {
+        background-color: $color-secondary;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        box-shadow: 0 .3rem 0 darken($color-secondary, 10%);
+        font-family: 'Open Sans', sans-serif;
+        padding: 1.3rem 0;
+        width: 16rem;
+        color: $color-green-dark;
+        transition: all .2s ease;
+        text-align: center;
+    }
+
+    &:hover {
+        background-color: darken($color-secondary, 5%);
+        color: lighten($color-primary, 25%);
+    }
 
     &:active {
         box-shadow: none;
         transform: translateY(.3rem);
+    }
+
+    @media only screen and (max-width:1300px) {
+        position: absolute;
+        bottom: 10rem;
+    }
+
+    @media only screen and (max-width:900px) {
+        position: relative;
+        bottom: unset;
+        margin-bottom: 1rem;
     }
 }

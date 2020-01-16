@@ -3,6 +3,14 @@
     background-color: $color-white;
     height: 52rem;
 
+    @media only screen and (max-width:800px) {
+        width: 45%;
+        margin-bottom: 1.5rem;
+    }
+
+    @media only screen and (max-width:600px) {
+        width: 90%;
+    }
 
     &__header {
         font-family: 'Open Sans', sans-serif;
@@ -13,8 +21,7 @@
         background-color: $color-primary;
         height: 12.9%;
         border-bottom: .7rem solid $color-secondary;
-        display: flex;
-        align-items: center;
+        @include alignCenterFlex;
         padding-left: 1.4rem;
         position: relative;
     }
@@ -41,7 +48,7 @@
     &__underline {
         height: 1px;
         width: 100%;
-        background-color: blue;
+        background-color: $color-grey-light-primary;
     }
 
 

@@ -1,35 +1,59 @@
 .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(../../img/header-bg.png);
+    background: url(../img/header-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    height: 76.8rem;
+    min-height: 76.8rem;
     position: relative;
-    display: flex;
+    @include abCenterFlex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+
+    @media only screen and (max-width: 510px) {
+        overflow: initial;
+        align-items: initial;
+        justify-content: unset;
+    }
 
     &__cards {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include abCenterFlex;
         z-index: 1;
+
+        @media only screen and (max-width: 750px) {
+            margin-top: -5rem;
+            flex-wrap: wrap;
+        }
+
+        @media only screen and (max-width: 660px) {
+            justify-content: space-evenly;
+        }
+
+        @media only screen and (max-width: 510px) {
+            width: 100%;
+        }
     }
+
+
 }
 
 
 .create-your-own {
-
     background-color: $color-grey-light-secondary;
-    display: flex;
-    align-items: center;
+    @include alignCenterFlex;
 
     &__cards {
-        display: flex;
-        align-items: center;
+        @include alignCenterFlex;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        @media only screen and (max-width:1380px) {
+            justify-content: space-evenly;
+
+        }
     }
+
+
 }
 
 .most-popular {
@@ -40,9 +64,46 @@
     background-position: 0 -38rem;
 
 
+
     &__lists {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width:1370px) {
+            justify-content: space-evenly;
+        }
+    }
+
+    @media only screen and (max-width:1620px) {
+        background-size: 150%;
+    }
+
+
+    @media only screen and (max-width:1000px) {
+        background-size: 200%;
+    }
+
+    @media only screen and (max-width:800px) {
+        background-size: 300%;
+    }
+
+    @media only screen and (max-width:750px) {
+        background-size: 400%;
+    }
+
+    @media only screen and (max-width:600px) {
+        background-size: 600%;
+
+    }
+
+    @media only screen and (max-width:510px) {
+        background-size: 800%;
+    }
+
+    @media only screen and (max-width:370px) {
+        background-size: 1000%;
+
     }
 }
 
@@ -55,6 +116,10 @@
         justify-content: space-between;
         margin-bottom: .7rem;
 
+        @media only screen and (max-width: 1400px) {
+            justify-content: space-evenly;
+        }
+
     }
 }
 
@@ -66,5 +131,12 @@
     &__cards {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 1390px) {
+            justify-content: space-evenly;
+        }
+
+
     }
 }

@@ -18,6 +18,12 @@ const browserSync = require('browser-sync').create();
 // for html
 const htmlmin = require('gulp-htmlmin');
 
+//for js
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+const plumber = require('gulp-plumber');
+
 // File paths
 const files = {
   scssPath: 'src/scss/**/*.scss',
@@ -47,6 +53,30 @@ function htmlTask() {
     .pipe(dest('./dist'))
 }
 
+function jsTask() {
+  return src([
+      files.jsPath
+      //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
+    ])
+    .pipe(plumber())
+    .pipe(
+      babel({
+        presets: [
+          [
+            '@babel/env',
+            {
+              modules: false
+            }
+          ]
+        ]
+      })
+    )
+    .pipe(concat('all.js'))
+    .pipe(uglify())
+    .pipe(dest('dist/js'))
+    .pipe(browserSync.stream());
+}
+
 // Watch task: watch SCSS and HTML files for changes
 // If any change, run scss and html tasks simultaneously
 function watchTask() {
@@ -56,8 +86,8 @@ function watchTask() {
     }
   });
   watch(
-    [files.htmlPath, files.scssPath],
-    parallel(htmlTask, scssTask)
+    [files.htmlPath, files.scssPath, files.jsPath],
+    parallel(htmlTask, scssTask, jsTask)
   );
   watch('./dist/index.html').on('change', browserSync.reload);
 }
@@ -65,6 +95,6 @@ function watchTask() {
 // Export the default Gulp task so it can be run
 // Runs the scss and html tasks simultaneously
 // then runs watch task
-exports.default = series(parallel(htmlTask, scssTask), watchTask);
+exports.default = series(parallel(htmlTask, scssTask, jsTask), watchTask);
 
 // npm install --save-dev gulp gulp-sourcemaps gulp-sass gulp-postcss autoprefixer cssnano gulp-replace browser-sync gulp-htmlmin

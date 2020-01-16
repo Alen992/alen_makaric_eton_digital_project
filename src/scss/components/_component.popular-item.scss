@@ -1,14 +1,13 @@
 .popular-item {
     height: 6rem;
-
     position: relative;
     width: 100%;
     display: flex;
 
-
     &:hover &__play {
         opacity: 1;
     }
+
 
 
     &__image {
@@ -131,9 +130,7 @@
         width: 100%;
         opacity: 0;
         transition: all .2s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include abCenterFlex;
     }
 
     &__play-icon {
@@ -165,8 +162,7 @@
     }
 
     &__group {
-        display: flex;
-        align-items: center;
+        @include alignCenterFlex;
         margin-right: .8rem;
 
         &:nth-child(2) {
@@ -177,6 +173,12 @@
     &__icon {
         height: 1.8rem;
         fill: $color-grey-light-primary;
+
+
+        &--lines {
+            margin-right: .5rem;
+            margin-bottom: -.6rem;
+        }
 
         &--icon-heart {
             margin-right: .5rem;
